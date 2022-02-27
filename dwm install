@@ -1,3 +1,47 @@
 ## In this tutorial you will install Dwm
 
 video commands are taken:  https://www.youtube.com/watch?v=4wbMcL1Optc
+
+## install packages
+sudo pacman -S xorg-server xorg-init xorg-xrandr xorg-xsetroot firefox nitrogen picom 
+
+
+cp /etc/X11/xinit/xinitrc .xinitrc
+ls -a
+vim .xinitrc -----------> remove last 5 lines 
+              ----------> # Keyboard Layout
+                            setxkbmap gb &
+                          #Display Resolution 
+                          xrandr --output [display name] --mode 1920x1080 &
+                          #compositor
+                          picom -f &
+                          #Execute DWM
+                          exec dwm
+:wq
+
+## install DWM
+sudo pacman -S wget
+wget https://dl.suckless.org/dwm/dwm-6.3.tar.gz
+tar -xzvf dwm-6.3.tar.gz
+cd dwm-6.3
+sudo make clean install
+
+## install ST
+wget https://dl.suckless.org/st/st-0.8.5.tar.gz
+tar -xzvf st-0.8.5.tar.gz
+cd st-0.8.5
+sudo make clean install
+
+## start dwm
+startx
+
+commands:
+alt + shift + enter ----> spawns terminals
+alt + shift + c     ----> closes terminals
+
+
+## Download Dmenu
+wget https://dl.suckless.org/tools/dmenu-5.1.tar.gz
+tar -xzvf dmenu-5.1.tar.gz
+cd dmenu-5.1
+sudo make clean install
