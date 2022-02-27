@@ -19,7 +19,7 @@ pacman -Syyy
 
 ## Disk Partitioning
 lsblk
-fsdisk /dev/sda
+fdisk /dev/sda
 ### Swap
 n
 p
