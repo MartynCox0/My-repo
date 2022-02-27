@@ -45,3 +45,26 @@ wget https://dl.suckless.org/tools/dmenu-5.1.tar.gz
 tar -xzvf dmenu-5.1.tar.gz
 cd dmenu-5.1
 sudo make clean install
+
+
+## refresh dwm 
+alt + shift + q
+startx
+
+## background
+alt + p (opens up dmenu)
+firefox  -------> wallpaper 4k 
+dmenu nitrogren > select photo > zoom fill > apply
+vim .xinitrc #wallpaper 
+              nitrogen --restore &
+              
+              
+             
+## change mod key
+vim config.def.h 
+define MODKEY Mod4Mask
+(replaced from Mod1Mask)
+
+sudo cp config.def.h config.h
+sudo make clean install
+
