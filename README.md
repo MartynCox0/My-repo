@@ -2,6 +2,8 @@
 
 # This repo is intended to be a list of commands to input sequentially to install a base Arch Linux installation.
 
+Link to video commands are taken : https://www.youtube.com/watch?v=4wbMcL1Optc
+
 ##Key maps
 localectl list-keymaps | grep GB
 load keys  [ name of key map you need ]
@@ -103,4 +105,6 @@ vim /etc/hosts ----append-------> 127.0.0.1   localhost
  umount -a
  reboot
  
+ ## graphics
+ sudo pacman -S xf86-video-intel
  
